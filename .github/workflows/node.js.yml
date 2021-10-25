@@ -30,5 +30,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - name: Deploy application
-    - run: git add remote heroku https://git.heroku.com/stormy-stream-66701.git
-    - run: git push heroku main
+    - run: 
+        git add remote heroku https://git.heroku.com/stormy-stream-66701.git
+    - run: 
+        git push heroku main
