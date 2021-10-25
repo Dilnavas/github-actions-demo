@@ -20,7 +20,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
@@ -30,6 +30,7 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - name: Deploy application
+    - uses: actions/heroku@master
     - env: HEROKU_AUTH_TOKEN:${{secrets.HEROKU_AUTH_TOKEN}}
     - run: 
         git add remote heroku https://heroku:$HEROKU_AUTH_TOKEN@git.heroku.com/stormy-stream-66701.git
