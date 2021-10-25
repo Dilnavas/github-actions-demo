@@ -32,4 +32,4 @@ jobs:
         HEROKU_AUTH_TOKEN: ${{secrets.HEROKU_AUTH_TOKEN}}
       run: 
         git remote add heroku https://heroku:$HEROKU_AUTH_TOKEN@git.heroku.com/stormy-stream-66701.git
-        git push heroku HEAD:main -F
+        git push heroku HEAD:main -f
