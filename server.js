@@ -24,6 +24,6 @@ app.get('/hello', (req, res) => {
 })
 
 
-app.listen(process.env.PORT | 5000, () =>
+app.listen(process.env.PORT || 5000, () =>
   console.log('server started at port 5000')
 )
