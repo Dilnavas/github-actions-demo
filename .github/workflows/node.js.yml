@@ -27,8 +27,8 @@ jobs:
         npm ci
         npm run build --if-present 
         npm test
-    - name: deploy
-#       env: 
-#         HEROKU_AUTH_TOKEN: ${{secrets.HEROKU_AUTH_TOKEN}}
+    - name: add remote heroku repo
       run: 
         git remote add heroku https://heroku:${{secrets.HEROKU_AUTH_TOKEN}}@git.heroku.com/stormy-stream-66701.git
+    - name: deploy
+      run: git push heroku HEAD:main -f
