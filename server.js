@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
 
 app.get('/info', (req, res) => {
   res.json({
+    project: 'node js',
     host: 'heroku',
     deployment: 'ci/cd using github actions',
   })
@@ -19,16 +20,15 @@ app.get('/info', (req, res) => {
 
 app.get('/hello', (req, res) => {
   res.json({
-    message: "Hellow guys hehehe .............."
+    message: 'Hellow guys hehehe ..............',
   })
 })
 
 app.get('/test', (req, res) => {
   res.json({
-    message: "This is a test route"
+    message: 'This is a test route',
   })
 })
-
 
 app.listen(process.env.PORT || 5000, () =>
   console.log('server started at port 5000')
