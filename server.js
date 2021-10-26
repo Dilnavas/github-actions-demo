@@ -23,6 +23,12 @@ app.get('/hello', (req, res) => {
   })
 })
 
+app.get('/test', (req, res) => {
+  res.json({
+    message: "This is a test route"
+  })
+})
+
 
 app.listen(process.env.PORT || 5000, () =>
   console.log('server started at port 5000')
