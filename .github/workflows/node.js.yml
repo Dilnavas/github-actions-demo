@@ -31,5 +31,4 @@ jobs:
 #       env: 
 #         HEROKU_AUTH_TOKEN: ${{secrets.HEROKU_AUTH_TOKEN}}
       run: 
-        git remote add heroku "https://heroku:${{secrets.HEROKU_AUTH_TOKEN}}@git.heroku.com/stormy-stream-66701.git"
-        git push heroku main -f
+        git remote add heroku https://heroku:${{secrets.HEROKU_AUTH_TOKEN}}@git.heroku.com/stormy-stream-66701.git
