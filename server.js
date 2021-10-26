@@ -10,6 +10,13 @@ app.get('/', (req, res) => {
   })
 })
 
+app.get('/info', (req, res) => {
+  res.json({
+    host: 'heroku',
+    deployment: 'ci/cd using github actions',
+  })
+})
+
 app.listen(process.env.PORT | 5000, () =>
   console.log('server started at port 5000')
 )
