@@ -17,6 +17,13 @@ app.get('/info', (req, res) => {
   })
 })
 
+app.get('/hello', (req, res) => {
+  res.json({
+    message: "Hellow guys"
+  })
+})
+
+
 app.listen(process.env.PORT | 5000, () =>
   console.log('server started at port 5000')
 )
