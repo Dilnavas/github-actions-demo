@@ -30,6 +30,12 @@ app.get('/test', (req, res) => {
   })
 })
 
+app.get('/login', (req, res) => {
+  res.json({
+    message: 'Please enter credentials !',
+  })
+})
+
 app.listen(process.env.PORT || 5000, () =>
   console.log('server started at port 5000')
 )
